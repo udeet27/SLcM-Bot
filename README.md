@@ -17,7 +17,16 @@ A simple python bot that'll send you an email every time a new document is uploa
 - Sending a whatsapp message rather than email.
 - This is a non-exhaustive list. Any other ideas at all are always welcome by opening an issue in this repo.
 
-Lastly, do give this repo a ⭐ and help spread the word if you found it interesting.
+### Why Open Source ?
+<img width="203" alt="image" src="https://github.com/udeet27/SLcM-Bot/assets/75639351/2704822c-5425-4286-874e-ba2d5a90f1ec">
+
+### How to run ?
+```pip install -r requirements.txt && python script.py```
+### What you'll get 
+<img width="742" alt="image" src="https://github.com/udeet27/SLcM-Bot/assets/75639351/633386f5-5864-4aec-9a6f-7128713e489d">
+<br><br>
+Lastly, do give this repo a ⭐ and help spread the word if you found it even remotely interesting.
+<br><br>
 
 [Sign up for SLcM Bot here](https://docs.google.com/forms/d/e/1FAIpQLSffSgt0n9C_sEFEo6PRrr_RVsGdW4WPmsjXXMR6OdysC27G3A/viewform)
 
