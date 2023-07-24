@@ -21,6 +21,7 @@ A simple python bot that'll send you an email every time a new document is uploa
 <img width="203" alt="image" src="https://github.com/udeet27/SLcM-Bot/assets/75639351/2704822c-5425-4286-874e-ba2d5a90f1ec">
 
 ### How to run ?
+- Please go through the comments in ```script.py``` for initial instructions and understanding. Then,<br>
 ```pip install -r requirements.txt && python script.py```
 ### What you'll get 
 <img width="742" alt="image" src="https://github.com/udeet27/SLcM-Bot/assets/75639351/633386f5-5864-4aec-9a6f-7128713e489d">
