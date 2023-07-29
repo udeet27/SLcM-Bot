@@ -15,7 +15,7 @@ chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 prefs = {
     "credentials_enable_service": False,
     "profile.password_manager_enabled": False,
-    "download.default_directory": "docs", # directory to store downloaded attachments
+    "download.default_directory": "C:\\x\\docs", # directory to store downloaded attachments
 }
 chrome_options.add_experimental_option("prefs", prefs)
 chrome_options.add_argument("--headless")
