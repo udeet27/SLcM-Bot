@@ -1,21 +1,19 @@
-import yagmail, glob, os, datetime, time
+import yagmail, os, datetime, time
 import pandas as pd
+from pathlib import Path
 
 SHEET_ID = "your-sheet-id"
 url = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv"
 df = pd.read_csv(url)
 
 recipients_addr = df["Email Address"].tolist()
-
-# names=df["Name"].tolist()
-files = glob.glob(os.path.expanduser("*.pdf"))
-
 time.sleep(20)  # to give time for the pdf to be downloaded
 
-# Sort by modification time (mtime) ascending and descending
-sorted_by_mtime_descending = sorted(files, key=lambda t: -os.stat(t).st_mtime)
-# print(sorted_by_mtime_descending)
-file_path = sorted_by_mtime_descending[:3]
+def get_modified_files(doc_dir, doc_count=3):
+    directory = Path(doc_dir) #creates a path object using the directory
+    files = list(directory.glob("*")) #retrieves all the files from the given directory to a list
+    files.sort(key=lambda x: x.stat().st_mtime, reverse = True) #sorts the list using modified time, newest first
+    return files[:doc_count]; #returns the latest 3 files
 
 titles = []
 with open("titles.txt", "r") as f:
@@ -44,7 +42,7 @@ subject = "New Doc Alert | SLcM Bot"
 body = msg
 yag.send(
     to=recipients_addr,  # for testing mail just replace the 'to' attribute with a comma separated email list
-    subject=subject,a
+    subject=subject,
     contents=body,
-    attachments=file_path,
+    attachments=get_modified_files("docs"),
 )
